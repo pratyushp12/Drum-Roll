@@ -1,4 +1,5 @@
 
+//On clicking the button, call sound and animation
 
 var numberOfButton = document.querySelectorAll(".drum").length;
 for(var i=0;i<numberOfButton;i++)
@@ -10,6 +11,8 @@ document.querySelectorAll(".drum")[i].addEventListener("click",function() {
 });
 }
 
+//on pressing key, call sound and animation
+
 document.addEventListener("keydown",function(event){
   var buttonValue = event.key;
   makeSound(buttonValue);
@@ -17,6 +20,7 @@ document.addEventListener("keydown",function(event){
 
 });
 
+//Function that makes sound depending on the letter clicked or pressed
 
 function makeSound(keyvalue)
 {
@@ -61,6 +65,9 @@ function makeSound(keyvalue)
     default:
   }
 }
+
+
+// animate the key on press or click
 
 function buttonAnimation(btnKey)
 {
